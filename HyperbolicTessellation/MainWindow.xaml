@@ -1,0 +1,33 @@
+﻿<Window x:Class="HyperbolicTessellation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Teselación Hiperbolica" Height="350" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Lados poligono:"/>
+                <TextBox x:Name="P" Text="5" Width="25" Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                <TextBlock Text="Grado de vertice:"/>
+                <TextBox x:Name="Q" Text="4" Width="25" Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                <TextBlock Text="Niveles:"/>
+                <TextBox x:Name="Level" Text="5" Width="25" Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
+                <CheckBox x:Name="Dual" Content="Dual" IsChecked="False" Width="50" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Dual_Click"/>
+            </StackPanel>
+            <Button x:Name="Generar" Content="Generar Teselacion" Margin="10,0,0,0" Click="Generar_Click"/>
+        </StackPanel>
+        <Border Grid.Row="1">
+            <Canvas x:Name="MyCanvas">
+            </Canvas>
+        </Border>
+    </Grid>
+</Window>
